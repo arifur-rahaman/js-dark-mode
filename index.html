@@ -4,6 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <nav>
+      <ul>
+        <li>Felna <i class="fa-solid fa-recycle"></i></li>
+        <li>Home</li>
+        <li>About</li>
+        <li>Blog</li>
+        <li>Contact Us</li>
+        <li><i class="fa-solid fa-moon" id="icon"></i></li>
+      </ul>
+    </nav>
+
+    <script>
+      let icon = document.getElementById("icon");
+      let sun = document.getElementById("sun");
+
+      icon.onclick = function () {
+        document.body.classList.toggle("dark-theme");
+
+        if (document.body.classList.contains("dark-theme")) {
+          // Change the icon class to the sun icon
+          icon.classList.remove("fa-solid", "fa-moon");
+          icon.classList.add("fa-regular", "fa-sun");
+        } else {
+          // Change the icon class back to the moon icon
+          icon.classList.remove("fa-regular", "fa-sun");
+          icon.classList.add("fa-solid", "fa-moon");
+        }
+      };
+    </script>
+  </body>
 </html>

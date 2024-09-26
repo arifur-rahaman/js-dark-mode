@@ -1,0 +1,47 @@
+:root {
+  --primary-color: #edf2fc;
+  --secondary-color: #212121;
+}
+
+.dark-theme {
+  --primary-color: #000106;
+  --secondary-color: #fff;
+}
+
+body {
+  background-color: var(--primary-color);
+}
+
+nav {
+  width: 95%;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+nav ul li {
+  list-style: none;
+  margin-left: 1.5rem;
+  color: var(--secondary-color);
+  transition: all 0.2s linear;
+}
+
+nav ul li:hover {
+  color: blueviolet;
+  transform: scale(1.1);
+}
+
+#icon {
+  width: 2rem;
+  cursor: pointer;
+  color: var(--secondary-color);
+}
+
+ul li:first-child {
+  margin-right: 50%;
+  text-transform: lowercase;
+  color: green;
+}
