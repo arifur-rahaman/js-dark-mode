@@ -14,7 +14,6 @@ body {
 }
 
 nav {
-  box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem grey;
   padding: 5px 0;
   margin: 0 auto;
 }
@@ -46,4 +45,43 @@ ul li:first-child {
   margin-right: 50%;
   text-transform: lowercase;
   color: green;
+}
+
+@media screen and (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 5px 0;
+  }
+
+  ul li:first-child {
+    margin-right: 0;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  color: var(--secondary-color);
+  padding: 2rem;
+}
+
+.social-media-icon i {
+  margin-left: 1rem;
 }
