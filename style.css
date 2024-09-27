@@ -1,20 +1,36 @@
+* {
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  outline: none;
+  font-weight: 400; /*for light*/
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   --primary-color: #edf2fc;
   --secondary-color: #212121;
+  --list-color: #008000;
 }
 
 .dark-theme {
   --primary-color: #000106;
   --secondary-color: #fff;
+  --list-color: #adff2f;
 }
 
 body {
+  width: 100rem;
   background-color: var(--primary-color);
-  width: 95%;
+  max-width: 100%;
+  margin: auto; /* to make it center */
+  box-shadow: 0.1rem 0.1rem 0.1rem #c4c4c4, -0.1rem 0rem 0.1rem #c4c4c4;
 }
 
 nav {
-  padding: 5px 0;
+  padding: 20px 0;
   margin: 0 auto;
 }
 nav ul {
@@ -23,49 +39,30 @@ nav ul {
   flex-direction: row;
 }
 
-nav ul li {
-  list-style: none;
+nav ul a li {
   margin-left: 1.5rem;
   color: var(--secondary-color);
   transition: all 0.2s linear;
+  cursor: pointer;
 }
 
-nav ul li:hover {
-  color: blueviolet;
+nav ul a li:hover {
+  color: var(--list-color);
   transform: scale(1.1);
 }
 
 #icon {
   width: 2rem;
+  margin-left: 1.5rem;
   cursor: pointer;
   color: var(--secondary-color);
 }
 
-ul li:first-child {
-  margin-right: 50%;
+.logo {
+  margin-right: 10rem;
   text-transform: lowercase;
-  color: green;
-}
-
-@media screen and (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-
-    align-items: center;
-  }
-
-  nav ul li {
-    margin: 5px 0;
-  }
-
-  ul li:first-child {
-    margin-right: 0;
-  }
-
-  .footer-content {
-    flex-direction: column;
-    align-items: center;
-  }
+  color: #008000;
+  cursor: pointer;
 }
 
 .container {
@@ -73,6 +70,10 @@ ul li:first-child {
   justify-content: center;
   align-items: center;
   height: 80vh;
+}
+
+.coming-soon-img {
+  width: 50%;
 }
 
 .footer-content {
@@ -84,4 +85,36 @@ ul li:first-child {
 
 .social-media-icon i {
   margin-left: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  nav ul a li {
+    margin: 5px 0;
+  }
+
+  .logo {
+    margin-right: 0;
+  }
+
+  .coming-soon-img {
+    min-width: 90%;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+  }
+
+  footer,
+  p,
+  div {
+    margin: 10px 0;
+  }
 }
