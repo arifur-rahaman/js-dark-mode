@@ -21,6 +21,17 @@
   --list-color: #adff2f;
 }
 
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
 body {
   width: 100rem;
   background-color: var(--primary-color);
@@ -36,6 +47,7 @@ nav {
 nav ul {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: row;
 }
 
@@ -58,11 +70,14 @@ nav ul a li:hover {
   color: var(--secondary-color);
 }
 
-.logo {
+#logo {
   margin-right: 10rem;
-  text-transform: lowercase;
+
   color: #008000;
   cursor: pointer;
+  margin-right: 0;
+  height: 70px;
+  width: 80px;
 }
 
 .container {
@@ -70,6 +85,14 @@ nav ul a li:hover {
   justify-content: center;
   align-items: center;
   height: 80vh;
+}
+
+.hero__section {
+  padding: 5rem;
+}
+
+.hero__content {
+  color: var(--secondary-color);
 }
 
 .coming-soon-img {
@@ -98,8 +121,8 @@ nav ul a li:hover {
     margin: 5px 0;
   }
 
-  .logo {
-    margin-right: 0;
+  .hero__content h1 {
+    font-size: 1.5rem;
   }
 
   .coming-soon-img {
